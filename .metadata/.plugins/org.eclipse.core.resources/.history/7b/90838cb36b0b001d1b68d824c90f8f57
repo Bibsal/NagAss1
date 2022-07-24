@@ -1,0 +1,19 @@
+package assignment1;
+
+public class CarService {
+	
+	private String type;
+	private Double price;
+	private String insuranceType;
+	public CarService(String type, Double price, String insuranceType) {
+		
+		this.type = type;
+		this.price = price;
+		this.insuranceType = insuranceType;
+	}
+	public Double calculateCarInsurance() {
+		
+	}
+	
+	
+}

@@ -1,0 +1,41 @@
+package assignment1;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		Scanner scn=new Scanner(System.in);
+		String choice=null;
+		while(true)
+		{
+			if(choice==null||choice.equals("y"))
+			{
+				String model = scn.next();
+				String type = scn.next();
+				Double price = scn.nextDouble();
+				String insuranceType = scn.next();
+				
+				CarService csobj = new CarService(type, price, insuranceType);
+				Double totalInsurance = csobj.calculateCarInsurance();
+				
+				
+			}
+			else if(choice.equals("n"))
+			{
+				break;
+			}
+			else
+			{
+				
+				//........
+			}
+		}
+
+	}
+
+}

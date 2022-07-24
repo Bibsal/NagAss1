@@ -1,0 +1,26 @@
+package assignment1;
+
+import java.util.HashMap;
+
+public class CarConstant {
+	
+	
+	private static final Double HATCHBACK = 0.05;
+	private static final Double SEDAN = 0.08;
+	private static final Double SUV = 0.1;
+	
+	public static HashMap<String , Double> getValueToCalculatePercentage() {
+		
+		HashMap<String, Double> hm=new HashMap<>();
+		hm.put("Hatchback", HATCHBACK);
+		
+		hm.put("Sedan", SEDAN);
+		
+		hm.put("SUV", SUV);
+		return hm;
+		
+	}
+
+
+
+}

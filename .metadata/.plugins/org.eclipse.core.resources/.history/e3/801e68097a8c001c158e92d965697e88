@@ -1,0 +1,39 @@
+package RecursionInArrays;
+import java.util.*;
+public class AllIndicesInArray {
+	public static void main(String args[]) {
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		int[] arr = new int[n];
+		for(int i = 0; i < n; i++) {
+			arr[i] = scn.nextInt();
+		}
+		int x = scn.nextInt();
+		scn.close();
+		int[] ans = allindices(arr, 0, 0, x);
+		
+		if(ans.length == 0) {
+			System.out.println(x +" is not present in the array");
+		}
+		
+		for(int i = 0; i < ans.length; i++) {
+			System.out.print(ans[i] +" ");
+		}
+	}
+	
+	public static int[] allindices(int[] arr, int idx, int fsf, int x) {
+		if(idx == arr.length) {
+//			int[] retarr = new int[fsf];
+//			return retarr;
+			return new int[fsf];      // rather than making a array and returning it ny using two lines we can directly return or the complete the above two lines by this single line(i.e return new int[fsf]
+		}
+		if(arr[idx] == x) {
+			int[] fsfarr = allindices(arr, idx + 1, fsf + 1, x);
+			fsfarr[fsf] = idx;
+			return fsfarr;
+		} else {
+			int[] fsfarr = allindices(arr, idx + 1, fsf, x);
+			return fsfarr;
+		}
+	}
+}
